@@ -9,8 +9,11 @@ string Model;
 float Price;
 int Mileage;
  
-public:
+public: //access modifier
+//constructor has same name as class 
+// initializes objects
 Car  (string brand, string model, float price, int mileage){
+
     Brand=brand;
     Model=model;
     Price=price;
@@ -18,6 +21,12 @@ Car  (string brand, string model, float price, int mileage){
 
 }
 
+// destructor
+~Car(){
+    cout<<"the cars have been destroyed"<<endl;
+    cout<<Brand<<endl<<Model<<endl;
+}
+// function to display
 void display(){
     cout<<"brand:"<<Brand<<endl;
     cout << "Model: " << Model << endl;
@@ -36,11 +45,17 @@ cout << "Updated mileage: " << Mileage << " miles" << endl;
 
 
 int main(){
+    // car(with small letter ) is the object
 Car car ("Toyota","Corolla",20000,5000);
-        cout<<"the details are:"<<endl;
+ cout<<"the details for first car are:"<<endl;
         car.display(); 
         car.drive(150);
         car.drive(300);
+Car car1 ("Volvo","Corolla",3000,7000);
+        cout<<"the details for second car  are:"<<endl;
+        car1.display(); 
+        car1.drive(150);
+        car1.drive(300);
         return 0;
 
 
