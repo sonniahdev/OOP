@@ -1,0 +1,103 @@
+inheritance notes:
+types:
+single inheritance
+eg:
+class A{
+
+};
+class B :public A{
+
+}
+
+
+multilevel inheritance
+eg :
+class A{
+
+}
+class B: public A{
+
+}
+class C: public B{
+
+}
+
+multiple inheritace:
+eg:
+class A{
+
+}
+class B: public A{
+
+}
+class C: public A,B{
+
+}
+
+
+HIERACHIAL INHERITANCE:
+EG:
+
+class A{
+
+}
+class B: public A{
+
+}
+
+class C : public A{
+
+}
+
+Hybrid inheritance
+eg:
+
+class A{
+
+};
+class B: public A{
+
+};
+class C : public A{
+
+};
+
+// Each class to have it`s own access modifier
+class D : public B,public C{
+
+};
+
+
+
+
+class C : private A{
+// IF THE CLASS WE ARE INHERITING FROM IS 
+//PRIVATE MEANS IT WIL INHERITE FROM A BUT 
+//NOW EVERYTHING IN A BECOMES PRIVATE
+}
+
+
+//to resolve ambiguity we either use the virtual key word or eg:
+// so we know which class name is coming from
+obj.A.name()
+
+
+
+class A{
+
+};
+class B: virtual public A{
+
+};
+class C : public A{
+
+};
+
+
+// sample syntax
+
+class Accountholder{
+
+}
+
+class BankAccount: public Accountholder{}
